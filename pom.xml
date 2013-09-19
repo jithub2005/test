@@ -23,7 +23,9 @@
 		<commitOnMaster.01>pushed</commitOnMaster.01>
 		<commitOnMaster.02>pushed</commitOnMaster.02>
 		<commitOnFeature1>first</commitOnFeature1>
-		<commitOnFeature1>second</commitOnFeature1>
+		<commitOnFeature2>second</commitOnFeature2>
+		<commitOnFeature.2>pushed</commitOnFeature.2>
+		<commitOnFeature.2.01>pushed</commitOnFeature.2.01>
 	</properties>
 
 	<profiles>
