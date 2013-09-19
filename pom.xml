@@ -21,6 +21,7 @@
 		<master>true</master>
 		<commitOnMaster>pushed</commitOnMaster>
 		<commitOnMaster.01>pushed</commitOnMaster.01>
+		<commitOnMaster.02>pushed</commitOnMaster.02>
 	</properties>
 
 	<profiles>
