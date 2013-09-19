@@ -21,6 +21,7 @@
 		<master>true</master>
 		<commitOnMaster>pushed</commitOnMaster>
 		<commitOnFeature1>first</commitOnFeature1>
+		<commitOnFeature1>second</commitOnFeature1>
 	</properties>
 
 	<profiles>
