@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>at.jit.test</groupId>
+	<artifactId>jenkins-test</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Jenkins CI test</name>
+
+	<scm>
+		<connection>scm:git:git@dev.jit.at:test.git</connection>
+		<developerConnection>scm:git:git@dev.jit.at:test.git</developerConnection>
+		<url>https://github.com/jithub2005/test</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<properties>
+		<master>true</master>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>JIT</id>
+			<properties>
+				<nexus.host>nexus.${env.JIT_DEV_SERVER}</nexus.host>
+			</properties>
+
+			<distributionManagement>
+				<repository>
+					<id>JIT release repository</id>
+					<url>http://${nexus.host}/nexus/content/repositories/releases</url>
+				</repository>
+				<snapshotRepository>
+					<id>JIT snapshot repository</id>
+					<url>http://${nexus.host}/nexus/content/repositories/snapshots</url>
+				</snapshotRepository>
+			</distributionManagement>
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<configuration>
+							<tagNameFormat>@{project.version}</tagNameFormat>
+							<autoVersionSubmodules>true</autoVersionSubmodules>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
