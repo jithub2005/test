@@ -19,6 +19,7 @@
 
 	<properties>
 		<master>true</master>
+		<commitOnMaster>pushed</commitOnMaster>
 	</properties>
 
 	<profiles>
